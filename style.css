@@ -1,0 +1,264 @@
+body{
+  box-sizing: border-box;
+  font-family: lato,sans-serif;
+  margin: 0;
+  padding: 0;
+  background: black;
+}
+
+.grid{ 
+display: grid;
+    grid-template: auto / repeat(12, 1fr);
+ }  
+
+  /* start header*/
+
+.img1{
+  grid-column-end: span 1;
+  height: 100%;
+  width: 100%;
+}
+
+.title {
+    grid-column-end: span 10;
+    background: blue;
+    color: white;
+    text-align: center;  
+}
+
+.img2{
+  grid-column-end: span 1;
+  height: 100%;
+  width: 100%;
+}
+
+/* end header*/
+
+/*start navbar*/ 
+
+.sidebar {
+  grid-column-end: span 13;
+  background: blueviolet;
+}
+
+.sidebar_port{
+  display: none;
+}
+
+ul {
+    list-style-type: none;
+    font-size: 20px;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+}
+
+li {
+    float: left;
+}
+
+li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+  
+}
+
+/* Change the link color to #111 (black) on hover */
+li a:hover {
+    background-color: #111;
+}
+
+.active{
+  background-color: #4CAF50;
+}
+
+/*start section*/
+
+.content {
+  grid-column-end: span 13;
+  background: rgb(83, 81, 81);
+  }
+
+.caroussel{
+  display: flex;
+  flex-direction: column;
+  margin-top: 0;
+  margin-left: 140px;
+  margin-right: 140px;
+  margin-bottom: 20px;
+}
+
+.text{
+  background: blueviolet;
+  text-align: center;
+  font-size: 20px;
+  box-shadow: 10px 5px 5px red;
+  
+}
+.img_slide{
+height: 400px;
+}
+
+
+  div#slider { overflow: hidden; }
+  div#slider figure img { width: 20%; }
+  div#slider figure { 
+    position: relative;
+    width: 500%;
+    margin: 0;
+    left: 0;
+    text-align: left;
+    font-size: 0;
+    animation : 20s slidy infinite;
+  }
+
+  @keyframes slidy {
+    0% { left: 0%; }
+    15% {left: 0%; }
+    25% { left: -100%; }
+    45% { left: -100%; }
+    50% { left: -200%; }
+    70% { left: -200%; }
+    75% { left: -300%; }
+    95% { left: -300%; }
+    100% { left: -400%; }
+    }
+
+/*start footer*/
+.footer {
+  grid-column-end: span 13;
+  background: linear-gradient(70deg, blue, pink);
+
+}
+.wrapper{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between ;
+  align-items: center;
+  min-height: 80px;
+}
+.forme{
+  background: #333;
+  height: 50px;
+  width: 100px;
+  margin-left: 40px;
+  margin-right: 40px;
+  clip-path: polygon(75% 0%, 100% 50%, 75% 100%, 0% 100%, 25% 50%, 0% 0%);
+}
+.p_footer{
+  font-size: 30px;
+  font-family: fantasy;
+  text-align: center;
+  }
+/*end footer*/
+
+/*responsive port*/
+
+@media (max-width: 870px) {
+
+  .sidebar{
+    grid-column-end: span 2;
+    position: relative;
+    }
+
+.img1{
+  display: none;
+}
+
+.title {
+    grid-column-end: span 8;
+    background: blue;
+    color: white;
+    text-align: center; 
+    font-size: 80%; 
+}
+
+.img2{
+  grid-column-end: span 2;
+  height: 100%;
+  width: 100%;
+  
+}
+
+  
+  .content {
+  grid-column-end: span 13;
+  background: darkblue;
+      }
+  
+
+  .sidebar_port{
+    display: block;
+  }
+
+.list {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+}
+.list a {
+  color: black;
+  padding: 12px 12px;
+  text-decoration: none;
+  display: flex;
+  font-size: 12px;
+}
+.list a:hover {background-color: #f1f1f1}
+
+.sidebar:hover .list {
+    display: inline-block;
+}
+
+.sidebar:hover .active {
+  background-color: #3e8e41;
+}
+
+.caroussel{
+  display: flex;
+  flex-direction: column;
+  margin-top: 40px;
+  margin-left: 10px;
+  margin-right: 10px;
+  margin-bottom: 20px;
+}
+
+.img_slide{
+  height: 250px;
+  margin-top: 10px;
+  }
+
+  /*start footer*/
+.footer {
+  grid-column-end: span 13;
+  background: linear-gradient(70deg, blue, pink);
+
+}
+.wrapper{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between ;
+  align-items: center;
+  height: 80px;
+}
+.forme{
+  background: #333;
+  height: 50px;
+  width: 100px;
+  margin-left: 20px;
+  margin-right: 20px;
+  clip-path: polygon(75% 0%, 100% 50%, 75% 100%, 0% 100%, 25% 50%, 0% 0%);
+}
+.p_footer{
+  font-size: 20px;
+  font-family: fantasy;
+  text-align: center;
+  }
+
+
+}
